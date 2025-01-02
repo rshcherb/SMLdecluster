@@ -1,14 +1,15 @@
 ## Supervised Machine Learning (SML) declustering: Matlab computer scripts to perform declustering of earthquake catalogs
 
 #### Directory structure
-**MATLAB** folder contains the function scripts that perform the analysis. The following subfolderes contain Matalab functions:
-- **decluster** to perform declustering.
-- **etas2d** to fit and simulate forward the 2D ETAS model.
-- **fm** to analyze the frequency-magnitude statistics.
-- **ml_nnd** to perform the SML declustering.
-- **nnd** to perfomr NND analysis.
+**MATLAB/** folder contains the function scripts that perform the analysis. The following subfolderes contain Matalab functions:
+- **decluster/** to perform declustering.
+- **etas2d/** to fit and simulate forward the 2D ETAS model.
+- **fm/** to analyze the frequency-magnitude statistics.
+- **ml_nnd/** to perform the SML declustering.
+- **nnd/** to perfomr NND analysis.
 
-**italy** and **southcal** folders contain the output subfolders where the results of the analysis is written.
+**italy** and **southcal** folders contain the output subfolders where the results of the analysis is written. This folder has the following subfolders:
+- 
 
 #### To perform declustering:
 1. run fit_etas2d_catalogs.m to fit the ETAS model to a chosen seismicity catalog.
