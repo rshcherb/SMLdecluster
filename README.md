@@ -8,8 +8,11 @@
 - **ml_nnd/** to perform the SML declustering.
 - **nnd/** to perfomr NND analysis.
 
-**italy** and **southcal** folders contain the output subfolders where the results of the analysis is written. This folder has the following subfolders:
-- 
+**italy**, **southcal** folders contain the output subfolders where the results of the analysis is written for a specified region. This folder has the following subfolders:
+
+- catalog/ contains the earthquake catalog for the specified region. It must be a text file with 10 columns: \[year month day hour min sec latitue longitude magnitude depth\]
+- decluster/
+- etas_fit/
 
 #### To perform declustering:
 1. run fit_etas2d_catalogs.m to fit the ETAS model to a chosen seismicity catalog.
