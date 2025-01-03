@@ -13,7 +13,12 @@ The scripts were written for the following publication: R. Shcherbakov, S. Kotha
 **italy/**, **southcal/** folders contain the output subfolders where the results of the analysis is written for the specified region. This folder has the following subfolders:
 - **catalog/** must contain an earthquake catalog for the specified region. It must be a text file with 10 columns: \[year month day hour min sec latitue longitude magnitude depth\]
 - **decluster/** 
-- **etas_fit/** 
+- **etas_fit/**
+- **etas_test_cat** 
+- **etas_train_cat**
+- **ml_nnd**
+- **nnd** 
+etas2d_parameters.m script contains information about the geographical boundaries of the full and traget regions, time intervals, initial conditions, and other parameters that are specific for each region.
 
 #### To perform declustering:
 1. run fit_etas2d_catalogs.m to fit the ETAS model to a chosen seismicity catalog.
