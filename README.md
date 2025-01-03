@@ -2,7 +2,7 @@
 
 The scripts were written for the following publication: R. Shcherbakov, S. Kothari (2025) Earthquake declustering using supervised machine learning, submitted to BSSA.
 
-#### Directory structure
+### Directory structure
 **MATLAB/** folder contains the Matlab scripts that perform specific tasks. The following subfolderes contain functions:
 - **decluster/** to perform declustering.
 - **etas2d/** to fit and simulate forward the 2D ETAS model.
@@ -21,7 +21,7 @@ The scripts were written for the following publication: R. Shcherbakov, S. Kotha
 
 **etas2d_parameters.m** script contains information about the geographical boundaries of the full and target regions, time intervals, initial conditions, and other parameters that are specific for each region.
 
-#### To perform declustering:
+### To perform declustering:
 1. run **fit_etas2d_catalogs.m** to fit the ETAS model to a chosen seismicity catalog.
 2. run **sim_etas2d_catalogs.m** to simulate the ETAS model using the parameters estmated at the previous step.
 3. run **decluster_catalog.m** to decluster the chosen catalog using one of the four methods:
