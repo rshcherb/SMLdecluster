@@ -18,14 +18,15 @@ The scripts were written for the following publication: R. Shcherbakov, S. Kotha
 - **etas_train_cat**
 - **ml_nnd**
 - **nnd** 
-etas2d_parameters.m script contains information about the geographical boundaries of the full and target regions, time intervals, initial conditions, and other parameters that are specific for each region.
+
+**etas2d_parameters.m** script contains information about the geographical boundaries of the full and target regions, time intervals, initial conditions, and other parameters that are specific for each region.
 
 #### To perform declustering:
-1. run fit_etas2d_catalogs.m to fit the ETAS model to a chosen seismicity catalog.
-2. run sim_etas2d_catalogs.m to simulate the ETAS model using the parameters estmated at the previous step.
-3. run decluster_catalog.m to decluster the chosen catalog using one of the four methods:
-4. run ML_NND_analysis.m to perform analysis using the three declustering methods
-5. run nnd_analysis.m to perform NND analysis of a given catalog.
+1. run **fit_etas2d_catalogs.m** to fit the ETAS model to a chosen seismicity catalog.
+2. run **sim_etas2d_catalogs.m** to simulate the ETAS model using the parameters estmated at the previous step.
+3. run **decluster_catalog.m** to decluster the chosen catalog using one of the four methods:
+4. run **ML_NND_analysis.m** to perform analysis using the three declustering methods
+5. run **nnd_analysis.m** to perform NND analysis of a given catalog.
 
 These entry scripts specify all the initial parameters needed to perform the corresponding tasks. **Model** structure is used to pass the information into most functions. Model.sRegion specifies the region to analize and must match the corresponding folder name. 
 
