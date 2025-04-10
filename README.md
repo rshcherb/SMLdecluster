@@ -1,6 +1,6 @@
 ## Supervised Machine Learning (SML) declustering: Computer scripts to perform declustering of earthquake catalogs
 
-The scripts were written for the following publication: R. Shcherbakov, S. Kothari (2025) Earthquake declustering using supervised machine learning, BSSA, accepted.
+The scripts were written for the following publication: R. Shcherbakov, S. Kothari (2025) Earthquake declustering using supervised machine learning, BSSA, doi: https://doi.org/10.1785/0120250004.
 
 ### Directory structure
 **MATLAB/** folder contains the Matlab scripts that perform specific tasks. The following subfolderes contain functions:
