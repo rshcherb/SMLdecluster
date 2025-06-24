@@ -12,7 +12,7 @@ function [vReg_new, nVer_new] = poly_refine_vert(vReg,nNk,varargin)
 %
 %   version: 1.0.0, 7 May 2021
 %   ...
-%   version: 1.0.0, 11 June 2021
+%   version: 1.0.1, 23 June 2025
 %
     sMethod = 'EqualDist'; % 'EqualAngle';
     for k = 1:length(varargin)
@@ -20,20 +20,21 @@ function [vReg_new, nVer_new] = poly_refine_vert(vReg,nNk,varargin)
             sMethod = varargin{k+1};
         end
     end
-    
     nVer = length(vReg(:,1)) - 1; % the last element of vReg coincides with the first
     segment = zeros(nVer,1);      % the lengths of the segments of the original polygon
-    perimeter = 0;
+    perimeter = 0.0;
     for k = 1:nVer
         segment(k) = sqrt( (vReg(k,1)-vReg(k+1,1))^2 + (vReg(k,2)-vReg(k+1,2))^2 ); % sqrt( (x1-x2)^2 + (y1-y2)^2 )
         perimeter = perimeter + segment(k);
     end
-
+    %disp(perimeter)
+    %disp(segment)
     if strcmp(sMethod,'EqualDist')
         % this is for events inside the target region R. The radial
         % segments are computed by connecting each event with the points on the boundary of the target region R 
         vReg_new = [];
-        avd = perimeter/nNk;
+        avd = perimeter/double(nNk);
+        %disp(avd)
         nc = 0;
         for k = 1:nVer
             nc = nc + 1;
@@ -44,6 +45,7 @@ function [vReg_new, nVer_new] = poly_refine_vert(vReg,nNk,varargin)
                 nvert = nvert - 1;   % when the difference between the rounded value and initial is small don't add the last vertex
             end
             if nvert > 0
+                %disp(nvert)
                 for nv = 1:nvert
                     nc = nc + 1;
                     x = vReg(k,1) + nv*avd/segment(k)*(vReg(k+1,1)-vReg(k,1));
